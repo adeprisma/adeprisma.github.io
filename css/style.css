@@ -1,0 +1,89 @@
+html {
+    position: relative;
+}
+
+body {
+    margin-bottom: 100px;
+    color: #33495F;
+    margin-top: 30px;
+}
+
+.navbar-fixed-top .navbar-right li a {
+    color: #ECF0F2;
+}
+
+.navbar-fixed-top .navbar-right li a:hover,
+.navbar-fixed-top .navbar-right li a:focus {
+    color: #F1E0AC;
+}
+
+.dropdown .dropdown-menu li a,
+.dropdown .dropdown-menu li a:hover,
+.dropdown .dropdown-menu li a:focus {
+    color:#33495F;
+}
+
+
+.jumbotron .pasFoto {
+    border: 3px solid #33495F;
+}
+
+hr {
+    width: 250px;
+    border-top: 3px solid #33495F;
+}
+
+section {
+    min-height: 500px;
+}
+
+.about {
+    background-color: white;
+}
+
+.portfolio {
+    background-color: #ECF0F2;
+}
+
+.portfolio img {
+    width: 555px;
+    height: 294px;
+}
+
+.contact {
+    min-height: 600px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 100px;
+    background-color: #33495F;
+    color: #ECF0F2;
+    padding: 30px 0;
+}
+
+footer a {
+    color: #F1E0AC;
+  
+}
+
+.social-media a {
+    padding: 0.2em;
+    color: #ECF0F2;
+    transition: 300ms;
+}
+
+.social-media a:hover,
+.social-media a:focus {
+    color: #F1E0AC;
+    background: #ffffff1a;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+footer p a:hover {
+    color: #F1E0AC;
+    text-decoration: underline;
+}
