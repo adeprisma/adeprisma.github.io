@@ -1,44 +1,94 @@
+@font-face {
+    font-family: 'Open_Sans';
+    src: url(../fonts/OpenSans-Regular-webfont.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Righteous';
+    src: url(../fonts/Righteous-Regular.ttf) format('truetype');
+}
+
 html {
     position: relative;
 }
 
 body {
     margin-bottom: 100px;
-    color: #33495F;
-    margin-top: 30px;
+    /* margin-top: 30px; */
+    font-family: 'Open_Sans';
 }
 
-.navbar-fixed-top .navbar-right li a {
+nav {
+    transition: all ease 300ms;
+}
+
+.navbar {
+    padding: 10px;
+    opacity: 1;
+    background-color: rgba(51,73,95, 0);
+}
+
+.scroll {
+    padding: 0;
+    background-color: rgba(51,73,95, 1);
+    border-bottom: 1px groove black;
+}
+
+.navbar .navbar-header a {
+    font-family: 'Righteous', cursive;
+    font-weight: 900;
+    font-size: 25px;
+    color: goldenrod;
+    letter-spacing: 5px;
+}
+
+.navbar .navbar-right li a {
     color: #ECF0F2;
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
 .navbar-fixed-top .navbar-right li a:hover,
 .navbar-fixed-top .navbar-right li a:focus {
-    color: #F1E0AC;
+    color: goldenrod;
 }
 
-.dropdown .dropdown-menu li a,
-.dropdown .dropdown-menu li a:hover,
-.dropdown .dropdown-menu li a:focus {
-    color:#33495F;
+.jumbotron {
+    background-image: url(../img/top_sider_bg.jpg);
+    background-size: cover;
+    min-height: 570px;
+    padding-top: 150px;
 }
 
+.jumbotron h1 {
+    font-family: 'Righteous', cursive;
+    font-weight: 900;
+    color: #ECF0F2;
+}
+
+.jumbotron p {
+    color: #ECF0F2;
+}
 
 .jumbotron .pasFoto {
     border: 3px solid #33495F;
+    width: 200px;
 }
 
 hr {
     width: 250px;
-    border-top: 3px solid #33495F;
+    border-top: 3px solid goldenrod;
 }
 
 section {
     min-height: 500px;
+    /* color: #33495F; */
 }
 
 .about {
-    background-color: white;
+    background-color: #33495F;
+    color: #ECF0F2;
 }
 
 .portfolio {
@@ -65,7 +115,7 @@ footer {
 }
 
 footer a {
-    color: #F1E0AC;
+    color: goldenrod;
   
 }
 
@@ -77,13 +127,13 @@ footer a {
 
 .social-media a:hover,
 .social-media a:focus {
-    color: #F1E0AC;
+    color: goldenrod;
     background: #ffffff1a;
     text-decoration: none;
     border-radius: 10px;
 }
 
 footer p a:hover {
-    color: #F1E0AC;
+    color: goldenrod;
     text-decoration: underline;
 }

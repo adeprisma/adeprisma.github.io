@@ -4584,17 +4584,11 @@ textarea.input-group-sm > .input-group-btn > .btn {
     margin-right: 0;
   }
 }
-.navbar-default {
-  background-color: #33495F;
-}
+
 .navbar-default .navbar-brand {
   color: #ECF0F2;
 }
-.navbar-default .navbar-brand:focus,
-.navbar-default .navbar-brand:hover {
-  color: #F1E0AC;
-  background-color: transparent;
-}
+
 .navbar-default .navbar-text {
   color: #777;
 }
