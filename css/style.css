@@ -34,6 +34,11 @@ nav {
     border-bottom: 1px groove black;
 }
 
+.toggle-click {
+    background-color: rgba(51,73,95, .9);
+    height: 100vh;
+}
+
 .navbar .navbar-header a {
     font-family: 'Righteous', cursive;
     font-weight: 900;
@@ -42,16 +47,18 @@ nav {
     letter-spacing: 5px;
 }
 
-.navbar .navbar-right li a {
+.navbar .navbar-nav li a {
     color: #ECF0F2;
     font-size: 18px;
     font-weight: 900;
     text-transform: uppercase;
+    transition: all ease 300ms;
 }
 
-.navbar-fixed-top .navbar-right li a:hover,
-.navbar-fixed-top .navbar-right li a:focus {
+.navbar-fixed-top .navbar-nav li a:hover,
+.navbar-fixed-top .navbar-nav li a:focus {
     color: goldenrod;
+    font-size: 40px;
 }
 
 .jumbotron {

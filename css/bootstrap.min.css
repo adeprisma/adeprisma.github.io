@@ -4405,13 +4405,16 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 4px;
 }
+
 /* @media (min-width: 768px) {
   .navbar-toggle {
     display: none;
   }
 } */
+
 .navbar-nav {
   margin: 7.5px -15px;
+  text-align: center;
 }
 .navbar-nav > li > a {
   padding-top: 10px;
@@ -4441,7 +4444,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
     background-image: none;
   }
 }
-@media (min-width: 768px) {
+/* @media (min-width: 1400px) {
   .navbar-nav {
     float: left;
     margin: 0;
@@ -4453,7 +4456,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
     padding-top: 15px;
     padding-bottom: 15px;
   }
-}
+} */
 .navbar-form {
   padding: 10px 15px;
   margin-right: -15px;

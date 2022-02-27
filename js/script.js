@@ -7,10 +7,19 @@ $('.scroll-page').on('click', function(e){
         scrollTop: section.offset().top - 50
     }, 1000, 'easeOutBack');
 
-    $('.navbar-collapse').collapse('hide');
+    $('.navbar-collapse, .in').collapse('hide');
+    $('nav, navbar').removeClass('toggle-click');
 
     e.preventDefault();
 });
+
+
+$('button, .navbar-toggle').on('click', function(e) {
+    $('nav, navbar').toggleClass('toggle-click');
+    $('#navbar-collapse-1').css('padding-top', '20vh');
+    // $('nav, navbar').css({'height': '100vh'});
+});
+
 
 window.addEventListener('scroll', function() {
     var nav = document.querySelector('nav');
