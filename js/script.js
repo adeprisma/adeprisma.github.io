@@ -5,7 +5,9 @@ $('.scroll-page').on('click', function(e){
     console.log(section.offset().top);
     $('body, html').animate({
         scrollTop: section.offset().top - 50
-    }, 600, 'easeInBack');
+    }, 1000, 'easeOutBack');
+
+    $('.navbar-collapse').collapse('hide');
 
     e.preventDefault();
 });

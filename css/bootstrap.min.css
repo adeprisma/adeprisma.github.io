@@ -4264,11 +4264,11 @@ textarea.input-group-sm > .input-group-btn > .btn {
     border-radius: 4px;
   }
 }
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .navbar-header {
     float: left;
   }
-}
+} */
 .navbar-collapse {
   padding-right: 15px;
   padding-left: 15px;
@@ -4405,11 +4405,11 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 4px;
 }
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .navbar-toggle {
     display: none;
   }
-}
+} */
 .navbar-nav {
   margin: 7.5px -15px;
 }
@@ -5042,9 +5042,8 @@ a.badge:hover {
 }
 
 .jumbotron {
-  padding-top: 70px;
-  padding-bottom: 80px;
-  /* margin-bottom: 30px; */
+  padding-top: 30px;
+  padding-bottom: 30px;
   color: inherit;
   background-color: #ECF0F2;
 }
@@ -5070,10 +5069,6 @@ a.badge:hover {
   max-width: 100%;
 }
 @media screen and (min-width: 768px) {
-  .jumbotron {
-    padding-top: 48px;
-    padding-bottom: 48px;
-  }
   .container .jumbotron,
   .container-fluid .jumbotron {
     padding-right: 60px;
