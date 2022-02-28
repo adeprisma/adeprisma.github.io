@@ -20,6 +20,11 @@ $('button, .navbar-toggle').on('click', function(e) {
     // $('nav, navbar').css({'height': '100vh'});
 });
 
+$( document ).ready(function() {
+    $('.edu').append('<div class="dot dot-right"></div>', '<div class="line line-right"></div>');
+    $('.work-ex').append('<div class="dot dot-left"></div>', '<div class="line line-left"></div>');
+});
+
 
 window.addEventListener('scroll', function() {
     var nav = document.querySelector('nav');

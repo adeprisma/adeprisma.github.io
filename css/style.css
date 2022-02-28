@@ -21,12 +21,26 @@ body {
     margin-bottom: 100px;
     /* margin-top: 30px; */
     font-family: 'Open_Sans';
+    color: #33495F;
 }
 
 nav {
     transition: all ease 400ms;
 }
 
+hr {
+    width: 250px;
+    border-top: 3px solid goldenrod;
+}
+
+section {
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+section h2:first-child {
+    font-weight: 900;
+}
 /* Navbar Section */
 .navbar {
     padding: 10px;
@@ -98,13 +112,10 @@ nav {
     width: 200px;
 }
 
-hr {
-    width: 250px;
-    border-top: 3px solid goldenrod;
-}
-
-section {
-    min-height: 100vh;
+@media screen and (max-width:768px) {
+    .jumbotron p {
+        font-size: 18px;
+    }
 }
 /* End Jumbotron Section */
 
@@ -159,11 +170,6 @@ section {
     .about h2 {
         margin:  0;
         padding: 0;
-        font-size: 60px;
-    }
-
-    .about p {
-        font-size: 15px;
     }
 }
 
@@ -176,17 +182,185 @@ section {
         margin: 0 auto 25px;
     }
 }
+
+@media screen and (min-width:1366px) {
+    .about h2 {
+        font-size: 60px;
+    }
+
+    .about p {
+        font-size: 20px;
+    }
+
+    .box-details p {
+        font-size: 16px;
+    }
+}
 /* End About Section */
+
+/* Resume Section */
+.dot {
+    display: inline-block;
+    position: absolute;
+    background-color: #DAA520;
+    border-radius: 10px;
+    border: 2px solid #DAA520;
+    z-index: 2;
+    width: 12px;
+    height: 12px;
+}
+
+.line {
+    display: inline-block;
+    position: absolute;
+    background-color: #DAA520;
+    border-radius: 10px;
+    width: 36px;
+    height: 1px;
+    border: 2px solid #DAA520;
+    z-index: 2;
+}
+
+.dot-right {
+    top: 50%;
+    right: -43px;
+    transform: translateY(-35%);
+}
+
+.dot-left {
+    top: 50%;
+    left: -43px;
+    transform: translateY(-35%);
+}
+
+.line-right {
+    top: 50%;
+    right: -36px;
+}
+
+.line-left {
+    top: 50%;
+    left: -36px;
+}
+
+.resume {
+    background-color: #ECF0F2;
+}
+
+.content {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.left-wrapper {
+    border-right: 1px dotted #33495F;
+}
+
+.right-wrapper {
+    border-left: 1px dotted #33495F
+}
+
+.content h3 {
+    font-style: italic;
+    font-weight: 900; 
+}
+
+.fa-circle-check {
+    color: #1fc016;
+}
+
+.content h3,
+.content p {
+    color: #DAA520;
+    
+}
+
+.content h3 {
+    margin:0 0 10px;
+    font-size: 26px;
+}
+
+.edu {
+    margin-right: 35px;
+    box-shadow: -18px 18px 18px 0 rgba(0, 0, 0, 0.2);
+    border-right: 2px solid goldenrod;
+}
+
+.work-ex {
+    margin-left: 35px;
+    box-shadow: 18px 18px 18px 0 rgba(0, 0, 0, 0.2);
+    border-left: 2px solid goldenrod;
+}
+/* End Resume Section */
 
 /* Portfolio Section */
 .portfolio {
-    background-color: #ECF0F2;
+    background-color: #33495F;
+}
+
+.portfolio h2 {
+    color: #ECF0F2;
 }
 
 .portfolio img {
     width: 555px;
     height: 294px;
 }
+/* End Portfolio Section */
+
+/* Skills Section */
+.skills p {
+    margin: 0;
+    font-weight: 900;
+}
+
+.scale-of {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+.skill {
+    color: white;
+    margin-bottom: 10px;
+    padding-left: 30px;
+}
+
+.round {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+}
+
+.html-logo {background-image: url(../img/logo-html.png);}
+.css-logo {background-image: url(../img/logo-css.png);}
+.js-logo {background-image: url(../img/logo-js.png);}
+.php-logo {background-image: url(../img/logo-php.png);}
+.node-logo {background-image: url(../img/logo-node.png);}
+.vb-logo {background-image: url(../img/logo-vb.png);}
+.java-logo {background-image: url(../img/logo-java.png);}
+  
+.html {width: 90%; background-color: #E44D26; position: relative;}
+.css {width: 80%; background-color: #379AD6; position: relative;}
+.js {width: 70%; background-color: #FADF1C; position: relative;}
+.php {width: 80%; background-color: #4F5B93; position: relative;}
+.node {width: 50%; background-color: #7DBE42; position: relative;}
+.vb {width: 60%; background-color: #136099; position: relative;}
+.java {width: 60%; background-color: #DD3E68; position: relative;}
+/* End Skills Section */
+
+/* Contact Section */
+.contact {
+    background-color: #1E2326;
+    color: #ECF0F2;
+}
+/* End Contact Sectiom */
 
 footer {
     position: absolute;
