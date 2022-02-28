@@ -8,6 +8,11 @@
     src: url(../fonts/Righteous-Regular.ttf) format('truetype');
 }
 
+@font-face {
+    font-family: 'Cirqua';
+    src: url(../fonts/Lupanesque.ttf) format('truetype');
+}
+
 html {
     position: relative;
 }
@@ -19,13 +24,14 @@ body {
 }
 
 nav {
-    transition: all ease 300ms;
+    transition: all ease 400ms;
 }
 
 .navbar {
     padding: 10px;
     opacity: 1;
     background-color: rgba(51,73,95, 0);
+    height: 0;
 }
 
 .scroll {
@@ -37,10 +43,11 @@ nav {
 .toggle-click {
     background-color: rgba(51,73,95, .9);
     height: 100vh;
+    /* transform: scaleY(1); */
 }
 
 .navbar .navbar-header a {
-    font-family: 'Righteous', cursive;
+    font-family: 'Cirqua', cursive;
     font-weight: 900;
     font-size: 25px;
     color: goldenrod;

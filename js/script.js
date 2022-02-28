@@ -5,12 +5,12 @@ $('.scroll-page').on('click', function(e){
     console.log(section.offset().top);
     $('body, html').animate({
         scrollTop: section.offset().top - 50
-    }, 1000, 'easeOutBack');
+    }, 1700, 'easeInOutBack');
 
     $('.navbar-collapse, .in').collapse('hide');
     $('nav, navbar').removeClass('toggle-click');
 
-    e.preventDefault();
+    // e.preventDefault();
 });
 
 
