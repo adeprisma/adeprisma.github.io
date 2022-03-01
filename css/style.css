@@ -41,6 +41,13 @@ section {
 section h2:first-child {
     font-weight: 900;
 }
+
+@media screen and (max-width:768px) {
+    .mb {
+        margin-bottom: 50px;
+    }
+}
+
 /* Navbar Section */
 .navbar {
     padding: 10px;
@@ -138,6 +145,12 @@ section h2:first-child {
     box-shadow: 1px 1px 2px 9px #33495F, 0.6px 0.6px 4px 7px black;
     border-radius: 5px;
     filter: saturate(.9);
+}
+
+.about i {
+    font-weight: bold;
+    color: #DAA520;
+    font-style: normal;
 }
 
 .box-details {
@@ -312,30 +325,42 @@ section h2:first-child {
 /* End Portfolio Section */
 
 /* Skills Section */
+/* - technical skill - */
 .skills p {
     margin: 0;
     font-weight: 900;
+    font-size: 15px;
 }
 
 .scale-of {
     width: 100%;
     background-color: #ddd;
     border-radius: 10px;
+    margin: 4px 0 10px 0;
+    line-height: 100%;
+}
+
+.pro {
+    margin: 0;
 }
 
 .skill {
     color: white;
-    margin-bottom: 10px;
     padding-left: 30px;
 }
 
 .round {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-size: cover;
+    background-color: #DAA520;
+    border-radius: 50%;
     position: absolute;
-    top: -15px;
+    top: -13px;
     right: -15px;
+    line-height: 40px;
+    align-items: center;
+    text-align: center;
 }
 
 .html-logo {background-image: url(../img/logo-html.png);}
@@ -346,13 +371,35 @@ section h2:first-child {
 .vb-logo {background-image: url(../img/logo-vb.png);}
 .java-logo {background-image: url(../img/logo-java.png);}
   
-.html {width: 90%; background-color: #E44D26; position: relative;}
+.html {width: 80%; background-color: #E44D26; position: relative;}
 .css {width: 80%; background-color: #379AD6; position: relative;}
 .js {width: 70%; background-color: #FADF1C; position: relative;}
 .php {width: 80%; background-color: #4F5B93; position: relative;}
 .node {width: 50%; background-color: #7DBE42; position: relative;}
 .vb {width: 60%; background-color: #136099; position: relative;}
 .java {width: 60%; background-color: #DD3E68; position: relative;}
+
+/* - professional skill - */
+.skills .table td {
+    border: none;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.skills .table td.skill-name {
+    width: 30%;
+}
+
+.skills .table td.skill-bar {
+    width: 100%;
+}
+
+.communication {width: 80%; height: 13px; background-color: #DAA520; position: relative;}
+.team-work {width: 70%; height: 13px; background-color: #DAA520; position: relative;}
+.motivate {width: 90%; height: 13px; background-color: #DAA520; position: relative;}
+.confidence {width: 70%; height: 13px; background-color: #DAA520; position: relative;}
+.speaking {width: 65%; height: 13px; background-color: #DAA520; position: relative;}
+.creative {width: 80%; height: 13px; background-color: #DAA520; position: relative;}
 /* End Skills Section */
 
 /* Contact Section */
