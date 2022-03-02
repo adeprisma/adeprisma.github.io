@@ -15,9 +15,8 @@ $('.scroll-page').on('click', function(e){
 
 
 $('button, .navbar-toggle').on('click', function(e) {
-    $('nav, navbar').toggleClass('toggle-click');
-    $('#navbar-collapse-1').css('padding-top', '20vh');
-    // $('nav, navbar').css({'height': '100vh'});
+    $('nav').toggleClass('toggle-click');
+    $('#navbar-collapse-1').css('margin-top', '25vh');
 });
 
 $( document ).ready(function() {

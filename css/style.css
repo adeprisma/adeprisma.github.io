@@ -19,7 +19,6 @@ html {
 
 body {
     margin-bottom: 100px;
-    /* margin-top: 30px; */
     font-family: 'Open_Sans';
     color: #33495F;
 }
@@ -63,7 +62,7 @@ section h2:first-child {
 .scroll {
     padding: 0;
     background-color: rgba(51,73,95, 1);
-    border-bottom: 1px groove black;
+    box-shadow: 0px 18px 18px 0 rgba(0, 0, 0, 0.3);;
 }
 
 .toggle-click {
@@ -79,19 +78,32 @@ section h2:first-child {
     letter-spacing: 5px;
 }
 
-.navbar .navbar-nav li a {
+.navbar .navbar-nav > li > a {
     color: #ECF0F2;
     font-size: 18px;
     font-weight: 900;
     text-transform: uppercase;
     transition: all ease 300ms;
+    display: inline-block;
 }
 
-.navbar-fixed-top .navbar-nav li a:hover,
-.navbar-fixed-top .navbar-nav li a:focus {
+.navbar-fixed-top .navbar-nav > li > a:hover,
+.navbar-fixed-top .navbar-nav > li > a:focus {
     color: goldenrod;
     font-size: 40px;
 }
+
+.navbar-nav {
+    width: fit-content;
+    text-align: center;
+    margin: auto;
+}
+
+.collapse p {
+    color: #ECF0F2;
+    padding-bottom: 50px;
+}
+
 /* End Navbar Section */
 
 /* Jumbotron Section */

@@ -4414,7 +4414,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-nav {
   margin: 7.5px -15px;
-  text-align: center;
 }
 .navbar-nav > li > a {
   padding-top: 10px;
@@ -5045,8 +5044,6 @@ a.badge:hover {
 }
 
 .jumbotron {
-  padding-top: 30px;
-  padding-bottom: 30px;
   color: inherit;
   background-color: #ECF0F2;
 }
