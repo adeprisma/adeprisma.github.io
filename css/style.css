@@ -28,8 +28,8 @@ nav {
 }
 
 hr {
-    width: 250px;
-    border-top: 3px solid goldenrod;
+    width: 100px;
+    border-top: 1.3px solid goldenrod;
 }
 
 section {
@@ -418,6 +418,51 @@ section h2:first-child {
 .contact {
     background-color: #1E2326;
     color: #ECF0F2;
+}
+
+.contact form {
+    width: 45%;
+    display: block;
+    margin: auto;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    display: block;
+    position: absolute;
+    color: #33495F;
+    opacity: 0.5;
+    top: 6px;
+    left: 12px;
+    transition: all ease 300ms;
+}
+
+.form-group label:hover {
+    cursor: text;
+}
+
+.form-group .style {
+    font-size: 12px;
+    top: -20px;
+    left: 0;
+    font-weight: 700;
+    color: goldenrod;
+}
+
+.contact input:focus, 
+.contact textarea:focus {
+    border: 1px solid goldenrod;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px goldenrod;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px goldenrod;
+}
+
+.contact textarea {
+    height: 155px;
 }
 /* End Contact Sectiom */
 

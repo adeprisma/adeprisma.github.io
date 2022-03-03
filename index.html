@@ -121,7 +121,7 @@
                             <p><i class="fa-solid fa-graduation-cap"> Information System</i></p>
                             <p><i class="fa-solid fa-calendar-check"> 2021</i></p>
                             <ul class="fa-ul">
-                                <li><i class="fa-li fa fa-circle-check"></i>Applying the <i>Analytical Hierarchy Process</i> (AHP) method to the decision support system for study programs selection in university with <i>PHP</i>.</li>
+                                <li><i class="fa-li fa fa-circle-check"></i>Applying the <i>Analytical Hierarchy Process</i> (AHP) method to the decision support system for programs study selection in university with <i>PHP</i>.</li>
                                 <li><i class="fa-li fa fa-circle-check"></i>Design and Build a web-based app for admission high-school students with <i>PHP</i>.</li>
                                 <li><i class="fa-li fa fa-circle-check"></i>Design and Build Registration and Inventory App for Museum Collections with <i>CodeIgniter</i> (PHP Framework)</li>
                             </ul>
@@ -357,31 +357,23 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4 col-sm-offset-4">
+                <div class="col-sm-12">
                     <form action="">
                         <div class="form-group">
-                            <label for="name">Nama</label>
-                            <input type="text" name="name" id="name" class="form-control" placeholder="Masukkan nama">
+                            <label for="name">Your Name</label>
+                            <input type="text" name="name" class="form-control" onchange="myFunction()">
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" class="form-control" placeholder="Masukkan email">
+                            <label for="telp">Phone Number</label>
+                            <input type="tel" name="telp" class="form-control" onchange="myFunction()">
                         </div>
                         <div class="form-group">
-                            <label for="telp">Telp</label>
-                            <input type="tel" name="telp" id="telp" class="form-control" placeholder="Masukkan no. telepon">
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control">
-                                <option>-- Pilih Kategori --</option>
-                                <option>Web Design</option>
-                                <option>Web Development</option>
-                                <option>Desktop Development</option>
-                            </select>
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" class="form-control" onchange="myFunction()">
                         </div>
                         <div class="form-group">
                             <label for="message">Pesan</label>
-                            <textarea class="form-control"></textarea>
+                            <textarea class="form-control" name="message"></textarea>
                         </div>
                         <button type="submit" class="btn btn-success">Kirim Pesan</button>
                     </form>
