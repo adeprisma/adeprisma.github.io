@@ -295,7 +295,7 @@
                             <td class="skill-bar">
                                 <div class="scale-of">
                                     <div class="skill team-work">
-                                        <div class="round">70%</div>
+                                        <div class="round">80%</div>
                                     </div>
                                 </div>
                             </td>
@@ -358,25 +358,32 @@
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <form action="">
+                    <form action="" method="post" class="contact-form">
                         <div class="form-group">
                             <label for="name">Your Name</label>
-                            <input type="text" name="name" class="form-control" onchange="myFunction()">
+                            <input type="text" class="form-control name" required>
                         </div>
                         <div class="form-group">
                             <label for="telp">Phone Number</label>
-                            <input type="tel" name="telp" class="form-control" onchange="myFunction()">
+                            <input type="tel" class="form-control phoneNumber" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" name="email" class="form-control" onchange="myFunction()">
+                            <input type="email" class="form-control email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" class="form-control subject" required>
                         </div>
                         <div class="form-group">
                             <label for="message">Pesan</label>
-                            <textarea class="form-control" name="message"></textarea>
+                            <textarea class="form-control message" cols="30" rows="10" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-success">Kirim Pesan</button>
+                        <button type="submit" class="btn btn-send-contact">SEND MESSAGE</button>
                     </form>
+                    <div class="resultForm">
+                        
+                    </div>
                 </div>
             </div>
         </div>
@@ -409,6 +416,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <!-- <script src="js/script.js"></script> -->

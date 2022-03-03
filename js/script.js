@@ -45,12 +45,13 @@ for(var i = 0; i < group.length; i++){
     
     input.onblur = removeLabelActiveClass;
     input.onfocus = callLabelActiveClass;
-  
-  
+   
 }//end for loop
+
 function callLabelActiveClass(){
     addLabelActiveClass.call(this.parentNode);
 }
+
 function addLabelActiveClass(){
     var label = this.getElementsByTagName('label')[0];
     var input = this.getElementsByClassName('form-control')[0];
@@ -69,4 +70,33 @@ function removeLabelActiveClass(){
             label.classList.remove('style');
         }
     }
+}
+
+// js for send email
+document.querySelector('.contact-form').addEventListener('submit', submitForm);
+
+function submitForm(e) {
+    e.preventDefault();
+
+    // Get input values
+    let name = document.querySelector('.name').value;
+    let phoneNumber = document.querySelector('.phoneNumber').value;
+    let email = document.querySelector('.email').value;
+    let subject = document.querySelector('.subject').value;
+    let message = document.querySelector('.message').value;
+    let result = document.querySelector('.resultForm');
+
+    sendEmail(name, phoneNumber, email, subject, message);
+}
+
+function sendEmail(name, phoneNumber, email, subject, message) {
+    Email.send({
+        Host: "smtp.gmail.com",
+        Username: 'adeprisma7@gmail.com',
+        Password: 'kcpvutnjeunyfutt',
+        To: 'adeprisma7@gmail.com',
+        From: email,
+        Subject: `[ 📩📩 MESSAGE FROM VISITTER -> ADEPRISMA.GITHUB.IO] ${subject}`,
+        Body: `Name: ${name} <br>Phone Number: ${phoneNumber} <br>Email: ${email} <br>Message: ${message}`,
+    }).then((message) => alert("mail sent succesfully"))
 }
