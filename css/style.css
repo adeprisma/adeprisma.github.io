@@ -53,6 +53,39 @@ section h2:first-child {
     }
 }
 
+.button-up {
+    width: 70px;
+    height: 70px;
+    background-color: #33495F;
+    position: fixed;
+    border-radius: 50%;
+    right: 2.3vw;
+    bottom: 3vh;
+    z-index: 1;
+    color: #ECF0F2;
+    font-weight: 900;
+    box-shadow: 0px 1px 18px 1px rgba(0, 0, 0, 0.3);
+    transform: scale(0) rotate(0);
+    transition: transform cubic-bezier(.52,-0.35,.5,1.42) 500ms;
+    text-align: center;
+}
+
+.button-up:hover {
+    color: goldenrod;
+    text-decoration: none;
+}
+
+.button-up i {
+    line-height: 70px;
+    font-size: 30px;
+    margin-left: -2px;
+}
+
+.button-up span {
+    font-size: 10px;
+    display: block;
+}
+
 /* Navbar Section */
 .navbar {
     padding: 10px;
@@ -117,7 +150,7 @@ section h2:first-child {
     background-image: url(../img/jumbotron.jpg);
     background-size: cover;
     min-height: 100%;  
-    min-height: 120vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
 }
@@ -332,13 +365,30 @@ section h2:first-child {
     background-color: #33495F;
 }
 
+.portfolio .row:last-child {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio .col-sm-6 {
+    display: flex;
+}
+
+.portfolio .thumbnail {
+    width: 100%;
+    padding: 0;
+    border: none;
+    background-color: none;
+    border-radius: 0%;
+    box-shadow: 0px 1px 20px 1px rgba(0, 0, 0, 0.5);;
+}
+
 .portfolio h2 {
     color: #ECF0F2;
 }
 
 .portfolio img {
-    width: 555px;
-    height: 294px;
+    width: 100%;
 }
 /* End Portfolio Section */
 
@@ -470,7 +520,7 @@ section.contact {
 }
 
 .contact textarea {
-    height: 155px;
+    height: 100px;
 }
 
 .resultForm {

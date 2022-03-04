@@ -5,7 +5,7 @@ $('.scroll-page').on('click', function(e){
 
     $('body, html').animate({
         scrollTop: section.offset().top - 50
-    }, 1700, 'easeOutBounce');
+    }, 1600, 'easeOutBounce');
 
     $('.navbar-collapse, .in').collapse('hide');
     $('nav, navbar').removeClass('toggle-click');
@@ -28,12 +28,15 @@ $( document ).ready(function() {
 // js for trasnparent while in top offset
 window.addEventListener('scroll', function() {
     var nav = document.querySelector('nav');
+    var btnUp = document.querySelector('.button-up');
     var offset = window.pageYOffset;
 
     if (offset > 75) {
-        nav.classList.add('scroll')
+        nav.classList.add('scroll');
+        btnUp.style.transform = 'scale(1)';
     } else {
-        nav.classList.remove('scroll')
+        nav.classList.remove('scroll');
+        btnUp.style.transform = 'scale(0)';
     }
 });
 
