@@ -5,7 +5,7 @@ $('.scroll-page').on('click', function(e){
 
     $('body, html').animate({
         scrollTop: section.offset().top - 50
-    }, 1700, 'easeInOutBack');
+    }, 1700, 'easeOutBounce');
 
     $('.navbar-collapse, .in').collapse('hide');
     $('nav, navbar').removeClass('toggle-click');
@@ -96,7 +96,7 @@ function sendEmail(name, phoneNumber, email, subject, message) {
         Password: 'kcpvutnjeunyfutt',
         To: 'adeprisma7@gmail.com',
         From: email,
-        Subject: `[ 📩📩 MESSAGE FROM VISITTER -> ADEPRISMA.GITHUB.IO] ${subject}`,
+        Subject: `[📩ADEPRISMA.GITHUB.IO] ${subject}`,
         Body: `Name: ${name} <br>Phone Number: ${phoneNumber} <br>Email: ${email} <br>Message: ${message}`,
     }).then((message) => alert("mail sent succesfully"))
 }

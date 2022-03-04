@@ -47,6 +47,12 @@ section h2:first-child {
     }
 }
 
+@media screen and (min-width:1366px) {
+    .col-md-6 {
+        width: 55%;
+    }
+}
+
 /* Navbar Section */
 .navbar {
     padding: 10px;
@@ -111,7 +117,7 @@ section h2:first-child {
     background-image: url(../img/jumbotron.jpg);
     background-size: cover;
     min-height: 100%;  
-    min-height: 100vh;
+    min-height: 120vh;
     display: flex;
     align-items: center;
 }
@@ -415,15 +421,16 @@ section h2:first-child {
 /* End Skills Section */
 
 /* Contact Section */
-.contact {
-    background-color: #1E2326;
+section.contact {
+    background-color: #141B21;
     color: #ECF0F2;
+    display: flex;
+    align-items: center;
 }
 
 .contact form {
-    width: 45%;
-    display: block;
-    margin: auto;
+    width: 40%;
+    margin: 0 auto;
 }
 
 .form-group {
@@ -479,6 +486,7 @@ section h2:first-child {
     background-color: transparent;
     border: 1px solid #ECF0F2;
     font-weight: 900;
+    transition: all ease 300ms;
 }
 
 .btn-send-contact:hover {
@@ -488,7 +496,13 @@ section h2:first-child {
 
 @media screen and (max-width:768px) {
     .contact form {
-        width: 100%;
+        width: 92vw;
+    }
+}
+
+@media screen and (min-width:1366px) {
+    .contact form {
+        width: 35%;
     }
 }
 /* End Contact Sectiom */
