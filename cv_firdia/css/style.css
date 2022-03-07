@@ -16,6 +16,12 @@ section {
     min-height: 100vh;
 }
 
+.title {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+
 /* Jumbotron */
 .jumbotron {
     min-height: 100vh;
@@ -38,8 +44,12 @@ section {
 /* End Jumbotron */
 
 /* Product */
-.product .col-sm-4{
-    display: flex;
+.product {
+    padding: 50px 100px;
+}
+
+.product .col-sm-4 {
+    margin-bottom: 20px;
 }
 
 .product .card {
@@ -50,10 +60,37 @@ section {
 .product .card:hover {
     border: 1px solid rgb(0, 255, 21);
 }
+
 /* End Product */
 
 /* Gallery */
 .gallery {
-    background-color: rgb(3, 226, 22);
+    background: linear-gradient(rgb(255, 255, 255)10%, rgb(3, 226, 22) 50%, rgb(3, 226, 22) 80%, rgb(255, 255, 255) 100%);
+    min-height: fit-content;
+    padding: 4rem;
+}
+
+.gallery hr {
+    width: 65%;
+}
+
+.gallery .carousel-inner {
+    width: 65%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px #aaa;
 }
 /* End Gallery */
+
+/* About */
+.about {
+    min-height: fit-content;
+    padding: 4rem;
+}
+/* End About */
+
+/* Footer */
+footer {
+    background-color: rgb(3, 226, 22);
+    min-height: 10vh;
+}
+/* End Footer */
