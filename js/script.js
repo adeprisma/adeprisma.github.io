@@ -49,7 +49,7 @@ for(var i = 0; i < group.length; i++){
     input.onblur = removeLabelActiveClass;
     input.onfocus = callLabelActiveClass;
    
-}//end for loop
+}
 
 function callLabelActiveClass(){
     addLabelActiveClass.call(this.parentNode);

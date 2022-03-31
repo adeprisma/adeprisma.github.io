@@ -49,7 +49,6 @@ nav.navbar-expand-lg {
     display: flex;
     position: absolute;
     right: 10px;
-    top: 20px;
 }
 
 @media screen and (max-width:768px) {
