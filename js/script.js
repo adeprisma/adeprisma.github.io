@@ -94,12 +94,12 @@ function submitForm(e) {
 
 function sendEmail(name, phoneNumber, email, subject, message) {
     Email.send({
-        Host: "smtp.gmail.com",
-        Username: 'adeprisma7@gmail.com',
-        Password: 'kcpvutnjeunyfutt',
-        To: 'adeprisma7@gmail.com',
-        From: email,
-        Subject: `[📩ADEPRISMA.GITHUB.IO] ${subject}`,
-        Body: `Name: ${name} <br>Phone Number: ${phoneNumber} <br>Email: ${email} <br>Message: ${message}`,
-    }).then((message) => alert("mail sent succesfully"))
+      Host: "smtp.gmail.com",
+      Username: "adeprisma7@gmail.com",
+      Password: "pglucmvoytgyhsda",
+      To: "adeprisma7@gmail.com",
+      From: email,
+      Subject: `[📩ADEPRISMA.GITHUB.IO] ${subject}`,
+      Body: `Name: ${name} <br>Phone Number: ${phoneNumber} <br>Email: ${email} <br>Message: ${message}`,
+    }).then((message) => alert("mail sent succesfully"));
 }
