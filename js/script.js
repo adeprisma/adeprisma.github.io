@@ -1,5 +1,5 @@
 // js for menu link click
-$('.scroll-page').on('click', function(e){
+$('.scroll-page').on('click', function (e) {
     var link = $(this).attr('href');
     var section = $(link);
 
@@ -14,19 +14,19 @@ $('.scroll-page').on('click', function(e){
 });
 
 //  js for button navbar
-$('.navbar-toggle').on('click', function(e) {
+$('.navbar-toggle').on('click', function (e) {
     $('nav').toggleClass('toggle-click');
     $('#navbar-collapse-1').css('margin-top', '25vh');
 });
 
 // js for showing dot & line in resume page
-$( document ).ready(function() {
+$(document).ready(function () {
     $('.edu').append('<div class="dot dot-right"></div>', '<div class="line line-right"></div>');
     $('.work-ex').append('<div class="dot dot-left"></div>', '<div class="line line-left"></div>');
 });
 
 // js for trasnparent while in top offset
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     var nav = document.querySelector('nav');
     var btnUp = document.querySelector('.button-up');
     var offset = window.pageYOffset;
@@ -42,34 +42,34 @@ window.addEventListener('scroll', function() {
 
 //js for contact form
 var group = document.getElementsByClassName('form-group');
-for(var i = 0; i < group.length; i++){
-    group[i].onclick = addLabelActiveClass;// group listenere ends
-    var input = group[i].getElementsByClassName('form-control')[0];
-    
+
+$(group).each(function (key, element) {
+    element.onclick = addLabelActiveClass;// group listenere ends
+    var input = element.getElementsByClassName('form-control')[0];
+
     input.onblur = removeLabelActiveClass;
     input.onfocus = callLabelActiveClass;
-   
-}
+});
 
-function callLabelActiveClass(){
+function callLabelActiveClass() {
     addLabelActiveClass.call(this.parentNode);
 }
 
-function addLabelActiveClass(){
+function addLabelActiveClass() {
     var label = this.getElementsByTagName('label')[0];
     var input = this.getElementsByClassName('form-control')[0];
     if (!label.classList.contains('style')) {
         label.classList.add('style');
         input.focus();
     }
- }
+}
 
-function removeLabelActiveClass(){
-  //only move label back if input is empty
-    if(this.value===""){
+function removeLabelActiveClass() {
+    //only move label back if input is empty
+    if (this.value === "") {
         var label = this.parentNode.children[0];
 
-        if(label.classList.contains('style')) {
+        if (label.classList.contains('style')) {
             label.classList.remove('style');
         }
     }
@@ -82,24 +82,37 @@ function submitForm(e) {
     e.preventDefault();
 
     // Get input values
-    let name = document.querySelector('.name').value;
-    let phoneNumber = document.querySelector('.phoneNumber').value;
-    let email = document.querySelector('.email').value;
-    let subject = document.querySelector('.subject').value;
-    let message = document.querySelector('.message').value;
-    let result = document.querySelector('.resultForm');
+    var data = {
+        name: document.querySelector('.name').value,
+        phoneNumber: document.querySelector('.phoneNumber').value,
+        email: document.querySelector('.email').value,
+        subject: document.querySelector('.subject').value,
+        message: document.querySelector('.message').value,
+    }
 
-    sendEmail(name, phoneNumber, email, subject, message);
+    sendEmail(data);
 }
 
-function sendEmail(name, phoneNumber, email, subject, message) {
+function sendEmail(data) {
     Email.send({
-      Host: "smtp.gmail.com",
-      Username: "adeprisma7@gmail.com",
-      Password: "pglucmvoytgyhsda",
-      To: "adeprisma7@gmail.com",
-      From: email,
-      Subject: `[📩ADEPRISMA.GITHUB.IO] ${subject}`,
-      Body: `Name: ${name} <br>Phone Number: ${phoneNumber} <br>Email: ${email} <br>Message: ${message}`,
-    }).then((message) => alert("mail sent succesfully"));
+        Host: "sandbox.smtp.mailtrap.io",
+        Port: '25',
+        Username: "be0d20fcdc38e3",
+        Password: "c71bca341d584d",
+        To: "adeprisma7@gmail.com",
+        From: data.email,
+        Subject: `[📩ADEPRISMA.GITHUB.IO] ${data.subject}`,
+        Body: `Name: ${data.ame} <br>Phone Number: ${data.phoneNumber} <br>Email: ${data.email} <br>Message: ${data.message}`,
+    }).then(function (message) {
+        alert("Mail sent succesfully");
+        this.clearForm();
+    });
+}
+
+function clearForm() {
+    $('.name').val('');
+    $('.phoneNumber').val('');
+    $('.email').val('');
+    $('.subject').val('');
+    $('.message').val('');
 }

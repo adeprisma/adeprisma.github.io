@@ -363,6 +363,8 @@ section h2:first-child {
 /* Portfolio Section */
 .portfolio {
     background-color: #33495F;
+    max-height: 40vh;
+    overflow-y: hidden;
 }
 
 .portfolio .row:last-child {
@@ -435,17 +437,19 @@ section h2:first-child {
 .css-logo {background-image: url(../img/logo-css.png);}
 .js-logo {background-image: url(../img/logo-js.png);}
 .php-logo {background-image: url(../img/logo-php.png);}
-.node-logo {background-image: url(../img/logo-node.png);}
+.laravel-logo {background-image: url(../img/logo-laravel.png);}
 .vb-logo {background-image: url(../img/logo-vb.png);}
 .java-logo {background-image: url(../img/logo-java.png);}
+.dart-logo {background-image: url(../img/logo-dart.png); background-color: #21CCBF;}
   
-.html {width: 80%; background-color: #E44D26; position: relative;}
-.css {width: 80%; background-color: #379AD6; position: relative;}
-.js {width: 70%; background-color: #FADF1C; position: relative;}
+.html {width: 90%; background-color: #E44D26; position: relative;}
+.css {width: 90%; background-color: #379AD6; position: relative;}
+.js {width: 80%; background-color: #FADF1C; position: relative;}
 .php {width: 80%; background-color: #4F5B93; position: relative;}
-.node {width: 50%; background-color: #7DBE42; position: relative;}
-.vb {width: 60%; background-color: #136099; position: relative;}
-.java {width: 60%; background-color: #DD3E68; position: relative;}
+.laravel {width: 80%; background-color: #F35045; position: relative;}
+.vb {width: 70%; background-color: #136099; position: relative;}
+.java {width: 70%; background-color: #DD3E68; position: relative;}
+.dart {width: 70%; background-color: #21CCBF; position: relative;}
 
 /* - professional skill - */
 .skills .table td {
@@ -464,9 +468,9 @@ section h2:first-child {
 
 .communication {width: 80%; height: 13px; background-color: #DAA520; position: relative;}
 .team-work {width: 80%; height: 13px; background-color: #DAA520; position: relative;}
-.motivate {width: 90%; height: 13px; background-color: #DAA520; position: relative;}
-.confidence {width: 70%; height: 13px; background-color: #DAA520; position: relative;}
-.speaking {width: 65%; height: 13px; background-color: #DAA520; position: relative;}
+.motivate {width: 80%; height: 13px; background-color: #DAA520; position: relative;}
+.confidence {width: 80%; height: 13px; background-color: #DAA520; position: relative;}
+.ability-to-learn {width: 80%; height: 13px; background-color: #DAA520; position: relative;}
 .creative {width: 80%; height: 13px; background-color: #DAA520; position: relative;}
 /* End Skills Section */
 
