@@ -53,6 +53,11 @@ section h2:first-child {
     }
 }
 
+.occupation-text {
+    font-family: 'Righteous', cursive;
+    text-transform: uppercase;
+}
+
 .button-up {
     width: 70px;
     height: 70px;
@@ -363,8 +368,9 @@ section h2:first-child {
 /* Portfolio Section */
 .portfolio {
     background-color: #33495F;
-    max-height: 40vh;
+    max-height: 10vh;
     overflow-y: hidden;
+    position: relative;
 }
 
 .portfolio .row:last-child {
@@ -391,6 +397,31 @@ section h2:first-child {
 
 .portfolio img {
     width: 100%;
+}
+
+.btn-load-more {
+    padding: 12px 16px;
+    line-height: 1.4;
+    background: #33495F;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    /* font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif; */
+    color: white !important;
+    font-size: 1.2em;
+    cursor: pointer;
+    /* Important part */
+    transition: padding-right .3s ease-out;
+}
+
+.wrap-btn-load-more {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    text-align: center;
+    padding-bottom: 10rem;
+    backdrop-filter: blur(5px);
 }
 /* End Portfolio Section */
 
