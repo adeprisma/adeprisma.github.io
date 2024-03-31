@@ -95,21 +95,22 @@ function submitForm(e) {
 
 function sendEmail(data) {
     Email.send({
-        Host: "sandbox.smtp.mailtrap.io",
-        Port: '25',
-        Username: "be0d20fcdc38e3",
-        Password: "c71bca341d584d",
+        Host: "smtp.elasticemail.com",
+        Port: '2525',
+        Username: "adeprisma7@gmail.com",
+        Password: "0D8AC6F84375E19922FB80C261A293F8DD81",
         To: "adeprisma7@gmail.com",
         From: data.email,
         Subject: `[📩ADEPRISMA.GITHUB.IO] ${data.subject}`,
-        Body: `Name: ${data.ame} <br>Phone Number: ${data.phoneNumber} <br>Email: ${data.email} <br>Message: ${data.message}`,
+        Body: `Name: ${data.name} <br>Phone Number: ${data.phoneNumber} <br>Email: ${data.email} <br>Message: ${data.message}`,
     }).then(function (message) {
-        alert("Mail sent succesfully");
+        alert(message == "OK" ? "Email sent successfully" : "Error sending email. Message: " + message);
         this.clearForm();
     });
 }
 
 function clearForm() {
+    return window.location.reload();
     $('.name').val('');
     $('.phoneNumber').val('');
     $('.email').val('');

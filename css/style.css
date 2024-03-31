@@ -71,7 +71,7 @@ section h2:first-child {
     font-weight: 900;
     box-shadow: 0px 1px 18px 1px rgba(0, 0, 0, 0.3);
     transform: scale(0) rotate(0);
-    transition: transform cubic-bezier(.52,-0.35,.5,1.42) 500ms;
+    transition: transform cubic-bezier(.52, -0.35, .5, 1.42) 500ms;
     text-align: center;
 }
 
@@ -95,7 +95,7 @@ section h2:first-child {
 .navbar {
     padding: 10px;
     opacity: 1;
-    background-color: rgba(51,73,95, 0);
+    background-color: rgba(51, 73, 95, 0);
     height: 0;
 }
 
@@ -105,12 +105,13 @@ section h2:first-child {
 
 .scroll {
     padding: 0;
-    background-color: rgba(51,73,95, 1);
-    box-shadow: 0px 18px 18px 0 rgba(0, 0, 0, 0.3);;
+    background-color: rgba(51, 73, 95, 1);
+    box-shadow: 0px 18px 18px 0 rgba(0, 0, 0, 0.3);
+    ;
 }
 
 .toggle-click {
-    background-color: rgba(51,73,95, .9);
+    background-color: rgba(51, 73, 95, .9);
     height: 100vh;
 }
 
@@ -122,7 +123,7 @@ section h2:first-child {
     letter-spacing: 5px;
 }
 
-.navbar .navbar-nav > li > a {
+.navbar .navbar-nav>li>a {
     color: #ECF0F2;
     font-size: 18px;
     font-weight: 900;
@@ -131,8 +132,8 @@ section h2:first-child {
     display: inline-block;
 }
 
-.navbar-fixed-top .navbar-nav > li > a:hover,
-.navbar-fixed-top .navbar-nav > li > a:focus {
+.navbar-fixed-top .navbar-nav>li>a:hover,
+.navbar-fixed-top .navbar-nav>li>a:focus {
     color: goldenrod;
     font-size: 40px;
 }
@@ -154,7 +155,7 @@ section h2:first-child {
 .jumbotron {
     background-image: url(../img/jumbotron.jpg);
     background-size: cover;
-    min-height: 100%;  
+    min-height: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -180,6 +181,7 @@ section h2:first-child {
         font-size: 18px;
     }
 }
+
 /* End Jumbotron Section */
 
 /* About Section */
@@ -222,7 +224,7 @@ section h2:first-child {
     padding: 10px;
     font-weight: 900;
     border: 1px solid white;
-    background: linear-gradient(to right, goldenrod 50%, transparent 50%); 
+    background: linear-gradient(to right, goldenrod 50%, transparent 50%);
     background-position: right bottom;
     background-size: 200% 100%;
     transition: all ease-out 300ms;
@@ -232,12 +234,12 @@ section h2:first-child {
     color: white;
     border: 1px solid goldenrod;
     background-position: left bottom;
-    
+
 }
 
 @media screen and (min-width:992px) {
     .about h2 {
-        margin:  0;
+        margin: 0;
         padding: 0;
     }
 }
@@ -246,7 +248,7 @@ section h2:first-child {
     .about h2 {
         text-align: center;
     }
-    
+
     .about hr {
         margin: 0 auto 25px;
     }
@@ -265,6 +267,7 @@ section h2:first-child {
         font-size: 16px;
     }
 }
+
 /* End About Section */
 
 /* Resume Section */
@@ -334,7 +337,7 @@ section h2:first-child {
 
 .content h3 {
     font-style: italic;
-    font-weight: 900; 
+    font-weight: 900;
 }
 
 .fa-circle-check {
@@ -344,11 +347,11 @@ section h2:first-child {
 .content h3,
 .content p {
     color: #DAA520;
-    
+
 }
 
 .content h3 {
-    margin:0 0 10px;
+    margin: 0 0 10px;
     font-size: 26px;
 }
 
@@ -363,6 +366,7 @@ section h2:first-child {
     box-shadow: 18px 18px 18px 0 rgba(0, 0, 0, 0.2);
     border-left: 2px solid goldenrod;
 }
+
 /* End Resume Section */
 
 /* Portfolio Section */
@@ -371,6 +375,7 @@ section h2:first-child {
     max-height: 10vh;
     overflow-y: hidden;
     position: relative;
+    height: 100%;
 }
 
 .portfolio .row:last-child {
@@ -388,7 +393,8 @@ section h2:first-child {
     border: none;
     background-color: none;
     border-radius: 0%;
-    box-shadow: 0px 1px 20px 1px rgba(0, 0, 0, 0.5);;
+    box-shadow: 0px 1px 20px 1px rgba(0, 0, 0, 0.5);
+    ;
 }
 
 .portfolio h2 {
@@ -423,6 +429,7 @@ section h2:first-child {
     padding-bottom: 10rem;
     backdrop-filter: blur(5px);
 }
+
 /* End Portfolio Section */
 
 /* Skills Section */
@@ -464,23 +471,109 @@ section h2:first-child {
     text-align: center;
 }
 
-.html-logo {background-image: url(../img/logo-html.png);}
-.css-logo {background-image: url(../img/logo-css.png);}
-.js-logo {background-image: url(../img/logo-js.png);}
-.php-logo {background-image: url(../img/logo-php.png);}
-.laravel-logo {background-image: url(../img/logo-laravel.png);}
-.vb-logo {background-image: url(../img/logo-vb.png);}
-.java-logo {background-image: url(../img/logo-java.png);}
-.dart-logo {background-image: url(../img/logo-dart.png); background-color: #21CCBF;}
-  
-.html {width: 90%; background-color: #E44D26; position: relative;}
-.css {width: 90%; background-color: #379AD6; position: relative;}
-.js {width: 80%; background-color: #FADF1C; position: relative;}
-.php {width: 80%; background-color: #4F5B93; position: relative;}
-.laravel {width: 80%; background-color: #F35045; position: relative;}
-.vb {width: 70%; background-color: #136099; position: relative;}
-.java {width: 70%; background-color: #DD3E68; position: relative;}
-.dart {width: 70%; background-color: #21CCBF; position: relative;}
+.html-logo {
+    background-image: url(../img/logo-html.png);
+}
+
+.css-logo {
+    background-image: url(../img/logo-css.png);
+}
+
+.js-logo {
+    background-image: url(../img/logo-js.png);
+}
+
+.php-logo {
+    background-image: url(../img/logo-php.png);
+}
+
+.laravel-logo {
+    background-image: url(../img/logo-laravel.png);
+}
+
+.livewire-logo {
+    background-image: url(../img/logo-livewire.png);
+    background-position: center;
+    background-color: #fb73ac;
+}
+
+.vue-logo {
+    background-image: url(../img/Vue-JS-logo.png);
+    background-color: #44bb84;
+}
+
+.vb-logo {
+    background-image: url(../img/logo-vb.png);
+}
+
+.java-logo {
+    background-image: url(../img/logo-java.png);
+}
+
+.dart-logo {
+    background-image: url(../img/logo-dart.png);
+    background-color: #21CCBF;
+}
+
+.html {
+    width: 90%;
+    background-color: #E44D26;
+    position: relative;
+}
+
+.css {
+    width: 90%;
+    background-color: #379AD6;
+    position: relative;
+}
+
+.js {
+    width: 80%;
+    background-color: #FADF1C;
+    position: relative;
+}
+
+.php {
+    width: 80%;
+    background-color: #4F5B93;
+    position: relative;
+}
+
+.laravel {
+    width: 80%;
+    background-color: #F35045;
+    position: relative;
+}
+
+.livewire {
+    width: 80%;
+    background-color: #fb73ac;
+    position: relative;
+}
+
+.vue {
+    width: 70%;
+    background-color: #44bb84;
+    position: relative;
+}
+
+.vb {
+    width: 70%;
+    background-color: #136099;
+    position: relative;
+}
+
+.java {
+    width: 70%;
+    background-color: #DD3E68;
+    position: relative;
+}
+
+.dart {
+    width: 70%;
+    background-color: #21CCBF;
+    position: relative;
+}
 
 /* - professional skill - */
 .skills .table td {
@@ -497,12 +590,48 @@ section h2:first-child {
     width: 100%;
 }
 
-.communication {width: 80%; height: 13px; background-color: #DAA520; position: relative;}
-.team-work {width: 80%; height: 13px; background-color: #DAA520; position: relative;}
-.motivate {width: 80%; height: 13px; background-color: #DAA520; position: relative;}
-.confidence {width: 80%; height: 13px; background-color: #DAA520; position: relative;}
-.ability-to-learn {width: 80%; height: 13px; background-color: #DAA520; position: relative;}
-.creative {width: 80%; height: 13px; background-color: #DAA520; position: relative;}
+.communication {
+    width: 80%;
+    height: 13px;
+    background-color: #DAA520;
+    position: relative;
+}
+
+.team-work {
+    width: 80%;
+    height: 13px;
+    background-color: #DAA520;
+    position: relative;
+}
+
+.motivate {
+    width: 80%;
+    height: 13px;
+    background-color: #DAA520;
+    position: relative;
+}
+
+.confidence {
+    width: 80%;
+    height: 13px;
+    background-color: #DAA520;
+    position: relative;
+}
+
+.ability-to-learn {
+    width: 80%;
+    height: 13px;
+    background-color: #DAA520;
+    position: relative;
+}
+
+.creative {
+    width: 80%;
+    height: 13px;
+    background-color: #DAA520;
+    position: relative;
+}
+
 /* End Skills Section */
 
 /* Contact Section */
@@ -546,7 +675,7 @@ section.contact {
     opacity: 1;
 }
 
-.contact input:focus, 
+.contact input:focus,
 .contact textarea:focus {
     border: 1px solid goldenrod;
     outline: 0;
@@ -590,6 +719,7 @@ section.contact {
         width: 35%;
     }
 }
+
 /* End Contact Sectiom */
 
 footer {
@@ -604,7 +734,7 @@ footer {
 
 footer a {
     color: goldenrod;
-  
+
 }
 
 .social-media a {
