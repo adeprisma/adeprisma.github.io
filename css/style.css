@@ -172,13 +172,18 @@ section h2:first-child {
 }
 
 .jumbotron .pasFoto {
-    border: 3px solid #33495F;
+    border: 2px solid #937115;
+    border-radius: 50%; /* Adjust the radius as needed */
     width: 200px;
 }
 
 @media screen and (max-width:768px) {
+    .jumbotron h1 {
+        font-size: 30px;    
+    }
+
     .jumbotron p {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 

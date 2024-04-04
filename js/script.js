@@ -100,7 +100,7 @@ function sendEmail(data) {
         Username: "adeprisma7@gmail.com",
         Password: "0D8AC6F84375E19922FB80C261A293F8DD81",
         To: "adeprisma7@gmail.com",
-        From: data.email,
+        From: "adeprisma7@gmail.com",
         Subject: `[📩ADEPRISMA.GITHUB.IO] ${data.subject}`,
         Body: `Name: ${data.name} <br>Phone Number: ${data.phoneNumber} <br>Email: ${data.email} <br>Message: ${data.message}`,
     }).then(function (message) {
