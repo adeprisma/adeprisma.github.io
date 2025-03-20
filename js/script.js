@@ -98,7 +98,7 @@ function sendEmail(data) {
         Host: "smtp.elasticemail.com",
         Port: '2525',
         Username: "adeprisma7@gmail.com",
-        Password: "0D8AC6F84375E19922FB80C261A293F8DD81",
+        Password: "BA3784B7CB4C188DCB5B032EA1C17269BE87",
         To: "adeprisma7@gmail.com",
         From: "adeprisma7@gmail.com",
         Subject: `[📩ADEPRISMA.GITHUB.IO] ${data.subject}`,
