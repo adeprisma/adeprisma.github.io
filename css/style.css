@@ -433,6 +433,58 @@ section h2:first-child {
     backdrop-filter: blur(5px);
 }
 
+/* Custom Portfolio Styling */
+.portfolio .thumbnail {
+    background-color: #ffffff;
+    border: 1px solid #e7e7e7;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.portfolio .thumbnail:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+}
+
+.portfolio .thumbnail img {
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.portfolio .caption h3 {
+    margin-top: 0;
+    font-weight: bold;
+    color: #333;
+}
+
+.portfolio .caption p {
+    color: #555;
+    font-size: 16px;
+}
+
+.btn-load-more {
+    background-color: #2c3e50;
+    color: white;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    margin-top: 20px;
+}
+
+.btn-load-more:hover,
+.btn-load-more:focus {
+    background-color: #34495e;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
 /* End Portfolio Section */
 
 /* Skills Section */
