@@ -23,6 +23,13 @@ $('.navbar-toggle').on('click', function (e) {
 $(document).ready(function () {
     $('.edu').append('<div class="dot dot-right"></div>', '<div class="line line-right"></div>');
     $('.work-ex').append('<div class="dot dot-left"></div>', '<div class="line line-left"></div>');
+
+    // Tombol "Load More" untuk portofolio
+    $('#loadMoreBtn').on('click', function(e) {
+        e.preventDefault();
+        $('.portfolio-item:hidden').slideDown(500); // Menampilkan item tersembunyi dengan animasi
+        $(this).fadeOut(300); // Menghilangkan tombol setelah diklik
+    });
 });
 
 // js for trasnparent while in top offset
