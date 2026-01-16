@@ -25,7 +25,7 @@ $(document).ready(function () {
     $('.work-ex').append('<div class="dot dot-left"></div>', '<div class="line line-left"></div>');
 
     // Tombol "Load More" untuk portofolio
-    $('#loadMoreBtn').on('click', function(e) {
+    $('#loadMoreBtn').on('click', function (e) {
         e.preventDefault();
         $('.portfolio-item:hidden').slideDown(500); // Menampilkan item tersembunyi dengan animasi
         $(this).fadeOut(300); // Menghilangkan tombol setelah diklik
@@ -101,18 +101,36 @@ function submitForm(e) {
 }
 
 function sendEmail(data) {
-    Email.send({
-        Host: "smtp.elasticemail.com",
-        Port: '2525',
-        Username: "adeprisma7@gmail.com",
-        Password: "BA3784B7CB4C188DCB5B032EA1C17269BE87",
-        To: "adeprisma7@gmail.com",
-        From: "adeprisma7@gmail.com",
-        Subject: `[📩ADEPRISMA.GITHUB.IO] ${data.subject}`,
-        Body: `Name: ${data.name} <br>Phone Number: ${data.phoneNumber} <br>Email: ${data.email} <br>Message: ${data.message}`,
-    }).then(function (message) {
-        alert(message == "OK" ? "Email sent successfully" : "Error sending email. Message: " + message);
-        this.clearForm();
+    const btn = document.querySelector('.btn-send-contact');
+    const originalText = btn.innerText;
+    btn.innerText = 'SENDING...';
+    btn.disabled = true;
+
+    fetch("https://formspree.io/f/mgooovld", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            alert("Email sent successfully!");
+            clearForm();
+        } else {
+            response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                    alert(data["errors"].map(error => error["message"]).join(", "));
+                } else {
+                    alert("Oops! There was a problem submitting your form");
+                }
+            })
+        }
+    }).catch(error => {
+        alert("Oops! There was a problem submitting your form");
+    }).finally(() => {
+        btn.innerText = originalText;
+        btn.disabled = false;
     });
 }
 
