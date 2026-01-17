@@ -18,53 +18,70 @@
     <!-- These meta tags above are used for Open Graph Protocol -->
     <title>Ade Prisma | Portfolio Website</title>
     <link rel="shortcut icon" href="img/favicon_io/favicon.ico" type="image/x-icon">
-    <!-- Bootstrap & Style Versioning-->
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="css/bootstrap.min.css?v=5.3.3" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css?v=6.0.0">
+
+    <!-- Custom Style -->
     <script>
-        document.write('<link rel="stylesheet" href="css/bootstrap.min.css?dev=' + Math.floor(Math.random() * 100) + '"\>');
         document.write('<link rel="stylesheet" href="css/style.css?dev=' + Math.floor(Math.random() * 100) + '"\>');
-        document.write('<link rel="stylesheet" href="fontawesome/css/all.min.css?dev=' + Math.floor(Math.random() * 100) + '"\>');
     </script>
 </head>
 
 <body>
+    <!-- Splash Screen / Loader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+
     <!-- Navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a href="#home" class="navbar-brand scroll-page">
-                    <img src="img/AP_logo.png" alt="brand">
-                </a>
-                <button type="button" id="toggle-click" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a href="#home" class="navbar-brand scroll-page">
+                <img src="img/AP_logo.png" alt="brand">
+            </a>
+            <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            </div>
-            <div class="collapse navbar-collapse.in" id="navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="#about" class="scroll-page">About</a></li>
-                    <li><a href="#resume" class="scroll-page">Resume</a></li>
-                    <li><a href="#portfolio" class="scroll-page">Portfolio</a></li>
-                    <li><a href="#skills" class="scroll-page">Skills</a></li>
-                    <li><a href="#contact" class="scroll-page">Contact</a></li>
+            <div class="collapse navbar-collapse d-none d-lg-block" id="navbar-collapse-1">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a href="#about" class="nav-link scroll-page">About</a></li>
+                    <li class="nav-item"><a href="#resume" class="nav-link scroll-page">Resume</a></li>
+                    <li class="nav-item"><a href="#portfolio" class="nav-link scroll-page">Portfolio</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link scroll-page">Skills</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link scroll-page">Contact</a></li>
                 </ul>
-                <p class="text-center navbar-fixed-bottom">&copy; copyright 2022 by Ade Prisma Nugraha.</p>
+                <p class="text-center fixed-bottom d-lg-none">&copy; copyright 2022 by Ade Prisma Nugraha.</p>
             </div>
-
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu">
+        <div class="menu-content">
+            <a href="#about" class="mobile-link scroll-page">About</a>
+            <a href="#resume" class="mobile-link scroll-page">Resume</a>
+            <a href="#portfolio" class="mobile-link scroll-page">Portfolio</a>
+            <a href="#skills" class="mobile-link scroll-page">Skills</a>
+            <a href="#contact" class="mobile-link scroll-page">Contact</a>
+        </div>
+        <p class="text-center mobile-copyright">&copy; 2022 Ade Prisma Nugraha.</p>
+    </div>
     <!-- End Navbar -->
 
     <!-- Jumbotron -->
-    <div class="jumbotron text-center">
-        <div class="container">
-            <img src="img/at_coffee_shop-withbg-square.png" class="pasFoto" alt="">
+    <div class="p-5 bg-light text-center jumbotron-custom">
+        <div class="container py-5">
+            <img src="img/at_coffee_shop-withbg-square.png" class="pasFoto img-fluid" alt="">
             <div class="border-gradient"></div>
-            <h1>ADE PRISMA</h1>
-            <p>Full-Stack Web Developer | Tech Enthusiast</p>
+            <h1 class="display-4 fw-bold">ADE PRISMA</h1>
+            <p class="col-md-8 fs-4 mx-auto">Full-Stack Web Developer | Tech Enthusiast</p>
         </div>
     </div>
     <!-- End Jumbotron -->
@@ -73,8 +90,8 @@
     <section class="about" id="about">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-md-offset-1 text-center mb">
-                    <img src="img/working-space.png" alt="">
+                <div class="col-md-4 offset-md-1 text-center mb-4">
+                    <img src="img/working-space.png" alt="" class="img-fluid">
                 </div>
                 <div class="col-md-6">
                     <h2>About me</h2>
@@ -92,21 +109,11 @@
                             </div>
                             <div class="col-sm-6">
                                 <p><b>Address:</b> 🚩 Surabaya, Indonesia</p>
-                                <table>
-                                    <tr>
-                                        <td style="width:80px">
-                                            <p><b>Job Status:</b></p>
-                                        </td>
-                                        <td>
-                                            <p>On Site</p>
-                                        </td>
-                                    </tr>
-                                </table>
+                                <p><b>Job Status:</b> On Site</p>
                                 <p><b>Email:</b> adeprisma7@gmail.com</p>
                             </div>
                         </div>
                     </div>
-                    <!-- <a href="https://drive.google.com/file/d/1k9wxppbbivFUB5RAVwSjsMrCR4Og69S9/view?usp=sharing" class="btn btn-cv" target="_blank">Download CV <span class="fa-solid fa-download"></span></a> -->
                     <a href="javascript:;" onclick="alert('Still being cooked!')" class="btn btn-cv">Download CV <span
                             class="fa-solid fa-download"></span></a>
                 </div>
@@ -118,14 +125,14 @@
     <!-- Resume -->
     <section class="resume" id="resume">
         <div class="container">
-            <div class="row">
+            <div class="row pt-5">
                 <div class="col-sm-12">
                     <h2 class="text-center">My Resume</h2>
-                    <hr>
+                    <hr class="mx-auto">
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6 mb">
+                <div class="col-sm-6 mb-4">
                     <h3 class="text-center">Education & Courses</h3>
                     <div class="left-wrapper">
                         <div class="content edu">
@@ -134,12 +141,16 @@
                                     System</span></p>
                             <p><i class="fa-solid fa-calendar-check"> 2021</i></p>
                             <ul class="fa-ul">
-                                <li><i class="fa-li fa fa-circle-check"></i>Applied the <i>Analytical Hierarchy
+                                <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Applied the
+                                    <i>Analytical Hierarchy
                                         Process</i> (AHP) method to the decision support system for program study
-                                    selection in order to prepare college entrance with <i>PHP</i>.</li>
-                                <li><i class="fa-li fa fa-circle-check"></i>Designed and Built a web-based app for
+                                    selection in order to prepare college entrance with <i>PHP</i>.
+                                </li>
+                                <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Designed and
+                                    Built a web-based app for
                                     admission high-school students with <i>PHP</i>.</li>
-                                <li><i class="fa-li fa fa-circle-check"></i>Designed and Built Registration and
+                                <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Designed and
+                                    Built Registration and
                                     Inventory App for Museum Collections with <i>CodeIgniter</i> (PHP Framework)</li>
                             </ul>
                         </div>
@@ -147,25 +158,36 @@
                             <h3>Progate Inc.</h3>
                             <p><i class="fa-solid fa-calendar-check"> 2021</i></p>
                             <ul class="fa-ul">
-                                <li><i class="fa-li fa fa-circle-check"></i>Web Development Path (Node.js)</i></li>
-                                <li><i class="fa-li fa fa-circle-check"></i>HTML & CSS Course</i></li>
-                                <li><i class="fa-li fa fa-circle-check"></i>JavaScript Course</i></li>
-                                <li><i class="fa-li fa fa-circle-check"></i>PHP Course</i></li>
-                                <li><i class="fa-li fa fa-circle-check"></i>SQL Course</i></li>
-                                <li><i class="fa-li fa fa-circle-check"></i>Node.JS Course</i></li>
-                                <li><i class="fa-li fa fa-circle-check"></i>React.JS Course</i></li>
+                                <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Web Development
+                                    Path (Node.js)</i></li>
+                                <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>HTML & CSS
+                                    Course</i></li>
+                                <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>JavaScript
+                                    Course</i></li>
+                                <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>PHP Course</i>
+                                </li>
+                                <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>SQL Course</i>
+                                </li>
+                                <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Node.JS
+                                    Course</i></li>
+                                <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>React.JS
+                                    Course</i></li>
                             </ul>
                         </div>
                         <div class="content edu">
                             <h3>DICODING</h3>
                             <p><i class="fa-solid fa-calendar-check"> 2021</i></p>
                             <ul class="fa-ul">
-                                <li><i class="fa-li fa fa-circle-check"></i>Cloud Practitioner Essentials (Belajar Dasar
+                                <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Cloud
+                                    Practitioner Essentials (Belajar Dasar
                                     AWS Cloud)</li>
-                                <li><i class="fa-li fa fa-circle-check"></i>Architecting on AWS (Membangun Arsitektur
+                                <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Architecting on
+                                    AWS (Membangun Arsitektur
                                     Cloud di AWS)</li>
-                                <li><i class="fa-li fa fa-circle-check"></i>Getting Started Programming with Java</li>
-                                <li><i class="fa-li fa fa-circle-check"></i>Learn Programming with SOLID Principles</li>
+                                <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Getting Started
+                                    Programming with Java</li>
+                                <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Learn Programming
+                                    with SOLID Principles</li>
                             </ul>
                         </div>
                     </div>
@@ -177,9 +199,11 @@
                             <h3>Freelance Web Developer</h3>
                             <p><i class="fa-solid fa-calendar-check"> 2021</i></p>
                             <ul class="fa-ul">
-                                <li><i class="fa-li fa fa-circle-check"></i>Built E-commerce and Services web-based for
+                                <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Built E-commerce
+                                    and Services web-based for
                                     factory machines with <i>Bootstrap</i> and <i>CodeIgniter</i> (PHP Framework).</li>
-                                <li><i class="fa-li fa fa-circle-check"></i>Built E-commerce web-based for shoes retail
+                                <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Built E-commerce
+                                    web-based for shoes retail
                                     with <i>Bootstrap</i> and <i>CodeIgniter</i> (PHP Framework).</li>
                             </ul>
                         </div>
@@ -189,17 +213,22 @@
                                     Developer</span></p>
                             <p><i class="fa-solid fa-calendar-check"> 2022</i></p>
                             <ul class="fa-ul">
-                                <li><i class="fa-li fa fa-circle-check"></i>Built E-commerce web-based with
+                                <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Built E-commerce
+                                    web-based with
                                     <i>BOOTSTRAP</i> and <i>LARAVEL</i>
                                 </li>
-                                <li><i class="fa-li fa fa-circle-check"></i>Collaborative Work as a Full-Stack Web
+                                <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Collaborative
+                                    Work as a Full-Stack Web
                                     Developer to built Human Resource Application using <i>LIVEWIRE LARAVEL</i></li>
-                                <li><i class="fa-li fa fa-circle-check"></i>Collaborative Work as a Full-Stack Web
+                                <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Collaborative
+                                    Work as a Full-Stack Web
                                     Developer to built Cooperative System with Accounting using <i>LARAVEL</i> and
                                     <i>PLAIN JavaScript</i>
                                 </li>
-                                <li><i class="fa-li fa fa-circle-check"></i>Contributed to more than 10 projects</li>
-                                <li><i class="fa-li fa fa-circle-check"></i>Troubleshooted more than 100 codes and bugs.
+                                <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Contributed to
+                                    more than 10 projects</li>
+                                <li><span class="fa-li"><i class="fa-solid fa-circle-check"></i></span>Troubleshooted
+                                    more than 100 codes and bugs.
                                     And still up</li>
                             </ul>
                         </div>
@@ -213,20 +242,21 @@
     <!-- Portfolio -->
     <section class="portfolio" id="portfolio">
         <div class="container">
-            <div class="row">
+            <div class="row pt-5">
                 <div class="col-sm-12 text-center">
                     <h2>Portfolio</h2>
-                    <hr>
+                    <hr class="mx-auto">
                 </div>
             </div>
 
-            <div class="row portfolio-item">
-                <div class="col-sm-10 col-sm-offset-1">
-                    <div class="thumbnail">
-                        <img src="img/cnctools.png" alt="E-commerce Mesin Pabrik">
-                        <div class="caption">
-                            <h3>E-commerce Mesin Pabrik</h3>
-                            <p>Membangun website E-commerce dan layanan untuk mesin pabrik menggunakan Bootstrap dan
+            <div class="row portfolio-item justify-content-center">
+                <div class="col-sm-10">
+                    <div class="card mb-3">
+                        <img src="img/cnctools.png" class="card-img-top" alt="E-commerce Mesin Pabrik">
+                        <div class="card-body">
+                            <h3 class="card-title">E-commerce Mesin Pabrik</h3>
+                            <p class="card-text">Membangun website E-commerce dan layanan untuk mesin pabrik menggunakan
+                                Bootstrap dan
                                 CodeIgniter (PHP Framework). Website ini memiliki fitur manajemen produk, transaksi, dan
                                 halaman admin yang komprehensif.</p>
                             <a href="#" class="btn btn-primary" target="_blank">Lihat Proyek</a>
@@ -235,13 +265,14 @@
                 </div>
             </div>
 
-            <div class="row portfolio-item" style="display: none;">
-                <div class="col-sm-10 col-sm-offset-1">
-                    <div class="thumbnail">
-                        <img src="img/bakulsepatu.png" alt="E-commerce Sepatu Retail">
-                        <div class="caption">
-                            <h3>E-commerce Sepatu Retail</h3>
-                            <p>Membangun website E-commerce untuk ritel sepatu menggunakan Bootstrap dan CodeIgniter
+            <div class="row portfolio-item justify-content-center" style="display: none;">
+                <div class="col-sm-10">
+                    <div class="card mb-3">
+                        <img src="img/bakulsepatu.png" class="card-img-top" alt="E-commerce Sepatu Retail">
+                        <div class="card-body">
+                            <h3 class="card-title">E-commerce Sepatu Retail</h3>
+                            <p class="card-text">Membangun website E-commerce untuk ritel sepatu menggunakan Bootstrap
+                                dan CodeIgniter
                                 (PHP Framework). Dilengkapi dengan sistem manajemen inventaris dan proses checkout yang
                                 mudah digunakan.</p>
                             <a href="#" class="btn btn-primary" target="_blank">Lihat Proyek</a>
@@ -250,13 +281,14 @@
                 </div>
             </div>
 
-            <div class="row portfolio-item" style="display: none;">
-                <div class="col-sm-10 col-sm-offset-1">
-                    <div class="thumbnail">
-                        <img src="img/dashboard.PNG" alt="Aplikasi Human Resource">
-                        <div class="caption">
-                            <h3>Aplikasi Human Resource</h3>
-                            <p>Berkolaborasi sebagai Full-Stack Web Developer untuk membangun Aplikasi Human Resource
+            <div class="row portfolio-item justify-content-center" style="display: none;">
+                <div class="col-sm-10">
+                    <div class="card mb-3">
+                        <img src="img/dashboard.PNG" class="card-img-top" alt="Aplikasi Human Resource">
+                        <div class="card-body">
+                            <h3 class="card-title">Aplikasi Human Resource</h3>
+                            <p class="card-text">Berkolaborasi sebagai Full-Stack Web Developer untuk membangun Aplikasi
+                                Human Resource
                                 (HR) menggunakan Livewire dan Laravel. Aplikasi ini mengelola data karyawan, absensi,
                                 dan penggajian.</p>
                             <a href="#" class="btn btn-primary" target="_blank">Lihat Proyek</a>
@@ -265,13 +297,14 @@
                 </div>
             </div>
 
-            <div class="row portfolio-item" style="display: none;">
-                <div class="col-sm-10 col-sm-offset-1">
-                    <div class="thumbnail">
-                        <img src="img/kakota.png" alt="Sistem Koperasi">
-                        <div class="caption">
-                            <h3>Sistem Koperasi dengan Akuntansi</h3>
-                            <p>Berkolaborasi sebagai Full-Stack Web Developer untuk membangun Sistem Koperasi lengkap
+            <div class="row portfolio-item justify-content-center" style="display: none;">
+                <div class="col-sm-10">
+                    <div class="card mb-3">
+                        <img src="img/kakota.png" class="card-img-top" alt="Sistem Koperasi">
+                        <div class="card-body">
+                            <h3 class="card-title">Sistem Koperasi dengan Akuntansi</h3>
+                            <p class="card-text">Berkolaborasi sebagai Full-Stack Web Developer untuk membangun Sistem
+                                Koperasi lengkap
                                 dengan modul Akuntansi menggunakan Laravel dan JavaScript. Sistem ini mencakup simpan
                                 pinjam, laporan keuangan, dan manajemen anggota.</p>
                             <a href="#" class="btn btn-primary" target="_blank">Lihat Proyek</a>
@@ -293,14 +326,14 @@
     <!-- Skills and Knowledge -->
     <section class="skills" id="skills">
         <div class="container">
-            <div class="row">
+            <div class="row pt-5">
                 <div class="col-sm-12">
                     <h2 class="text-center">Skills</h2>
-                    <hr>
+                    <hr class="mx-auto">
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-5 col-sm-offset-1 mb">
+                <div class="col-sm-5 offset-sm-1 mb-4">
                     <h3>Technical Skills</h3>
                     <!-- Content -->
                     <p>HTML</p>
@@ -440,28 +473,28 @@
 
     <!-- Contact -->
     <section class="contact" id="contact">
-        <form action="" method="post" class="contact-form">
+        <form action="" method="post" class="contact-form container">
             <h2 class="text-center">Contact Me</h2>
-            <hr>
+            <hr class="mx-auto">
             <div class="form-group">
-                <label for="name">Your Name</label>
+                <label for="name" class="form-label">Your Name</label>
                 <input type="text" class="form-control name" required>
             </div>
             <div class="form-group">
-                <label for="telp">Phone Number</label>
+                <label for="telp" class="form-label">Phone Number</label>
                 <input type="tel" class="form-control phoneNumber" required>
             </div>
             <div class="form-group">
-                <label for="email">Email Address</label>
+                <label for="email" class="form-label">Email Address</label>
                 <input type="email" class="form-control email" required>
             </div>
             <div class="form-group">
-                <label for="subject">Subject</label>
+                <label for="subject" class="form-label">Subject</label>
                 <input type="text" class="form-control subject" required>
             </div>
             <div class="form-group">
-                <label for="message">Message</label>
-                <textarea class="form-control message" required></textarea>
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control message" rows="4" required></textarea>
             </div>
             <button type="submit" class="btn btn-send-contact">SEND MESSAGE</button>
         </form>
@@ -473,7 +506,7 @@
 
     <!-- Back to Up Button -->
     <a href="#home" class="button-up scroll-page">
-        <i class="glyphicon glyphicon-arrow-up"></i>
+        <i class="fa-solid fa-arrow-up"></i>
     </a>
     <!-- End Back to Up Button -->
 
@@ -502,11 +535,10 @@
     <!-- End Footer -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <!-- SMTP.js removed as service is shutdown -->
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js?v=3.7.1"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="js/bootstrap.bundle.min.js?v=5.3.3"></script>
     <script>document.write('<script src="js/script.js?dev=' + Math.floor(Math.random() * 100) + '"\><\/script>');</script>
 </body>
 

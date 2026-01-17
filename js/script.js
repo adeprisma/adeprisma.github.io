@@ -3,20 +3,55 @@ $('.scroll-page').on('click', function (e) {
     var link = $(this).attr('href');
     var section = $(link);
 
-    $('body, html').animate({
-        scrollTop: section.offset().top - 50
-    }, 1600, 'easeOutBounce');
+    // Standard behavior (CSS scroll-behavior: smooth handles smoothness now)
+    // $('body, html').animate({ scrollTop: ... }) removed as requested.
 
-    $('.navbar-collapse, .in').collapse('hide');
-    $('nav, navbar').removeClass('toggle-click');
+    // We can manually scroll if needed, but anchor default + css smooth scroll is cleaner "plain" approach.
+    // However, since we intercept click, we should ensure the jump happened if default was prevented.
+    // The original code didn't use e.preventDefault() for the link click itself, only the toggler.
+    // But jquery easing block usually implies we handle it.
+    // Let's just use window.scrollTo for a clean "plain" js jump if desired, or let event bubble.
+    // For now, let's keep it simple: Just close menu. The anchor default behavior will handle the jump.
 
-    // e.preventDefault();
+
+    // Close mobile menu if open
+    $('#mobile-menu').removeClass('active');
+    $('body').css('overflow', 'auto');
+
+    // Bootstrap 5 uses .show instead of .in, but .collapse('hide') works on the collapsible element itself
+    $('.navbar-collapse').collapse('hide');
+    // $('nav, navbar').removeClass('toggle-click'); // Legacy class removed
+
+    // Default anchor click will happen as we removed preventDefault() in previous steps implicitly if we removed the 'e.preventDefault()'
+    // Actually, line 1 was: $('.scroll-page').on('click', function (e) { ... e.preventDefault(); })
+    // If we want "plain" jump, we should remove e.preventDefault() OR enable scrollTo.
+    // Let's use scrollTo for precise offset control (navbar height).
+    window.scrollTo({
+        top: section.offset().top - 50,
+        behavior: 'smooth'
+    });
+
+    e.preventDefault();
+});
+
+// Splash Screen Loader
+window.addEventListener('load', function () {
+    const loader = document.getElementById('loader-wrapper');
+    loader.classList.add('loaded');
 });
 
 //  js for button navbar
-$('.navbar-toggle').on('click', function (e) {
-    $('nav').toggleClass('toggle-click');
-    $('#navbar-collapse-1').css('margin-top', '25vh');
+//  js for button navbar
+$('.navbar-toggler').on('click', function (e) {
+    e.preventDefault();
+    $('#mobile-menu').toggleClass('active');
+
+    // Prevent body scrolling when menu is open
+    if ($('#mobile-menu').hasClass('active')) {
+        $('body').css('overflow', 'hidden');
+    } else {
+        $('body').css('overflow', 'auto');
+    }
 });
 
 // js for showing dot & line in resume page
@@ -36,7 +71,7 @@ $(document).ready(function () {
 window.addEventListener('scroll', function () {
     var nav = document.querySelector('nav');
     var btnUp = document.querySelector('.button-up');
-    var offset = window.pageYOffset;
+    var offset = window.scrollY; // Updated from pageYOffset
 
     if (offset > 75) {
         nav.classList.add('scroll');

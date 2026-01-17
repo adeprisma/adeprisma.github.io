@@ -91,12 +91,106 @@ section h2:first-child {
     display: block;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loader / Splash Screen */
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    /* Highest priority */
+    background-color: #33495F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-out;
+}
+
+#loader {
+    display: block;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: goldenrod;
+    -webkit-animation: spin 2s linear infinite;
+    /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 2s linear infinite;
+    /* Chrome, Firefox 16+, IE 10+, Opera */
+    z-index: 100000;
+}
+
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #ECF0F2;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: goldenrod;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+
+#loader-wrapper.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /* Navbar Section */
 .navbar {
-    padding: 10px;
-    opacity: 1;
-    background-color: rgba(51, 73, 95, 0);
-    height: 0;
+    padding: 15px 0;
+    transition: all 0.4s ease;
+    background-color: transparent;
+    /* Start transparent */
+}
+
+/* Ensure brand image and text align */
+.navbar-brand {
+    display: flex;
+    align-items: center;
 }
 
 .navbar-brand img {
@@ -104,85 +198,158 @@ section h2:first-child {
 }
 
 .scroll {
-    padding: 0;
-    background-color: rgba(51, 73, 95, 1);
-    box-shadow: 0px 18px 18px 0 rgba(0, 0, 0, 0.3);
-    ;
+    padding: 10px 0;
+    background-color: rgba(51, 73, 95, 0.95);
+    /* Nearly opaque on scroll */
+    box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
-.toggle-click {
-    background-color: rgba(51, 73, 95, .9);
-    height: 100vh;
-}
 
-.navbar .navbar-header a {
+
+.navbar-brand {
     font-family: 'Cirqua', cursive;
     font-weight: 900;
     font-size: 25px;
-    color: goldenrod;
+    color: goldenrod !important;
+    /* Force goldenrod color */
     letter-spacing: 5px;
 }
 
-.navbar .navbar-nav>li>a {
-    color: #ECF0F2;
-    font-size: 18px;
-    font-weight: 900;
+.navbar-nav .nav-link {
+    color: #ECF0F2 !important;
+    font-size: 16px;
+    font-weight: 700;
     text-transform: uppercase;
     transition: all ease 300ms;
-    display: inline-block;
+    padding: 10px 15px !important;
 }
 
-.navbar-fixed-top .navbar-nav>li>a:hover,
-.navbar-fixed-top .navbar-nav>li>a:focus {
-    color: goldenrod;
-    font-size: 40px;
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: goldenrod !important;
+}
+
+/* Scaling effect on hover when top */
+.fixed-top .navbar-nav .nav-link:hover,
+.fixed-top .navbar-nav .nav-link:focus {
+    color: goldenrod !important;
+    font-size: 20px;
+    /* Reduced from 40px to be less jumping, or keep 40 if intended */
+    transform: scale(1.1);
+    /* smoother than font-size change */
 }
 
 .navbar-nav {
-    width: fit-content;
+    width: 100%;
     text-align: center;
     margin: auto;
+    justify-content: center;
 }
 
-.collapse p {
-    color: #ECF0F2;
-    padding-bottom: 50px;
+/* Mobile Menu Overlay */
+#mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(51, 73, 95, 0.98);
+    z-index: 1029;
+    /* Below toggler (1030) but above everything else */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
 }
+
+#mobile-menu.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+}
+
+.mobile-link {
+    font-size: 24px;
+    font-weight: 900;
+    color: #ECF0F2;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Righteous', cursive;
+    font-family: 'Righteous', cursive;
+    transition: all ease 300ms;
+}
+
+.mobile-link:hover {
+    color: goldenrod;
+    transform: scale(1.2);
+    /* Increased scale to match desktop's dramatic growth */
+}
+
+.mobile-copyright {
+    position: absolute;
+    bottom: 20px;
+    color: rgba(236, 240, 242, 0.5);
+    font-size: 14px;
+}
+
+/* Ensure Toggler stays on top */
+.navbar-toggler {
+    z-index: 1031;
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
 
 /* End Navbar Section */
 
 /* Jumbotron Section */
-.jumbotron {
+.jumbotron-custom {
     background-image: url(../img/jumbotron.jpg);
     background-size: cover;
     min-height: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
+    flex-direction: column;
+    /* Ensure content stacks vertically */
+    justify-content: center;
 }
 
-.jumbotron h1 {
+.jumbotron-custom h1 {
     font-family: 'Righteous', cursive;
     font-weight: 900;
     color: #ECF0F2;
 }
 
-.jumbotron p {
+.jumbotron-custom p {
     color: #ECF0F2;
 }
 
-.jumbotron .pasFoto {
+.jumbotron-custom .pasFoto {
     border: 2px solid #937115;
-    border-radius: 50%; /* Adjust the radius as needed */
+    border-radius: 50%;
+    /* Adjust the radius as needed */
     width: 200px;
 }
 
 @media screen and (max-width:768px) {
-    .jumbotron h1 {
-        font-size: 30px;    
+    .jumbotron-custom h1 {
+        font-size: 30px;
     }
 
-    .jumbotron p {
+    .jumbotron-custom p {
         font-size: 16px;
     }
 }
@@ -391,11 +558,11 @@ section h2:first-child {
     display: flex;
 }
 
-.portfolio .thumbnail {
+.portfolio .card {
     width: 100%;
     padding: 0;
     border: none;
-    background-color: none;
+    background-color: transparent;
     border-radius: 0%;
     box-shadow: 0px 1px 20px 1px rgba(0, 0, 0, 0.5);
 }
@@ -434,32 +601,32 @@ section h2:first-child {
 }
 
 /* Custom Portfolio Styling */
-.portfolio .thumbnail {
+.portfolio .card {
     background-color: #ffffff;
     border: 1px solid #e7e7e7;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease-in-out;
     margin-bottom: 30px;
     padding: 20px;
 }
 
-.portfolio .thumbnail:hover {
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+.portfolio .card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     transform: translateY(-5px);
 }
 
-.portfolio .thumbnail img {
+.portfolio .card img {
     border-radius: 4px;
     margin-bottom: 15px;
 }
 
-.portfolio .caption h3 {
+.portfolio .card-body h3 {
     margin-top: 0;
     font-weight: bold;
     color: #333;
 }
 
-.portfolio .caption p {
+.portfolio .card-body p {
     color: #555;
     font-size: 16px;
 }
@@ -482,7 +649,7 @@ section h2:first-child {
     background-color: #34495e;
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* End Portfolio Section */
